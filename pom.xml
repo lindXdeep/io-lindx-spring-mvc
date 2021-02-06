@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>my-webapp</name>
+    <name>my-webapp-servlet</name>
     <url>https://github.com/lindXdeep/webapp</url>
 
     <properties>
