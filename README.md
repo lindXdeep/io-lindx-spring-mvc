@@ -16,3 +16,6 @@ rm -r src/main/webapp/index.jsp
 ```sh 
 rm -r ~/deploy-contaner/webapps/myapp &&  sleep 5  && mvn compile war:war
 ```
+```sh 
+mvn compile && rm -r ~/deploy-contaner/webapps/myapp &  sleep 5  && mvn war:war
+```
