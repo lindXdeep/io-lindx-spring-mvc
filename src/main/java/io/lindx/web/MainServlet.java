@@ -1,7 +1,6 @@
 package io.lindx.web;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +14,8 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter writer = resp.getWriter();
-        writer.print("Hello Servlet");
+        System.out.println("main method22666");
+        req.getRequestDispatcher("main.jsp").forward(req, resp);
+      
     }
 }

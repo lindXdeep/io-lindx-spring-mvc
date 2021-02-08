@@ -5,7 +5,7 @@
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-         <display-name>Hello world web Application</display-name>
+         <display-name>Servlet and JSP Examples</display-name>
 
          <servlet>
              <servlet-name>HelloServlet</servlet-name>
@@ -14,7 +14,8 @@
 
          <servlet-mapping>
              <servlet-name>HelloServlet</servlet-name>
-             <url-pattern>/</url-pattern>
+             <url-pattern>/main</url-pattern>
          </servlet-mapping>
 
+       
 </web-app>
