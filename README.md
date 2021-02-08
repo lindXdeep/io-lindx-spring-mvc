@@ -12,3 +12,7 @@ mkdir -p src/main/java/io/lindx/web
 touch src/main/java/io/lindx/web/MainServlet.java
 rm -r src/main/webapp/index.jsp 
 ```
+
+```sh 
+rm -r ~/deploy-contaner/webapps/myapp &&  sleep 5  && mvn compile war:war
+```
