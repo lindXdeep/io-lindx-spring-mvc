@@ -1,12 +1,14 @@
-package io.lindx.web.config;
+package io.lindx.web;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class WebInit extends AbstractAnnotationConfigDispatcherServletInitializer {
+import io.lindx.web.config.AppConfig;
+
+public class Webinit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{AppConfig.class};
+        return new Class<?>[] { AppConfig.class };
     }
 
     @Override
@@ -16,6 +18,6 @@ public class WebInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/app/*"};
+        return new String[] { "/app/*" };
     }
 }
