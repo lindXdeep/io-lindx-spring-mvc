@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
-@ComponentScan(value = "io.lindx.web.controller")
+@ComponentScan(basePackages = "io.lindx.web.controller")
 @EnableWebMvc
 public class AppConfig {
     
