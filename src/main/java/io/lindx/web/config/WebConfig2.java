@@ -2,6 +2,8 @@ package io.lindx.web.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+// это второй способ рекомендуемый
+
 public class WebConfig2 extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
@@ -9,7 +11,7 @@ public class WebConfig2 extends AbstractAnnotationConfigDispatcherServletInitial
         return new Class[]{AppConfig.class};
     }
 
-    @Override
+    @Override 
     protected Class<?>[] getServletConfigClasses() {
         return null;
     }
@@ -19,5 +21,4 @@ public class WebConfig2 extends AbstractAnnotationConfigDispatcherServletInitial
         
         return new String[] { "/app2/*"};
     }
-    
 }

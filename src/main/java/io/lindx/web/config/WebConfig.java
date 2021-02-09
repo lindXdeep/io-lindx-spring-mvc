@@ -7,6 +7,9 @@ import javax.servlet.ServletRegistration;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
+
+// это был первый способ
+
 // public class WebConfig implements WebApplicationInitializer {
 
 //     @Override
