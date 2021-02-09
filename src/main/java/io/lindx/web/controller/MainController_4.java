@@ -10,8 +10,6 @@ public class MainController_4 {
 
     private AtomicLong counter = new AtomicLong();
 
-
-
     @GetMapping("/thread")
     public String increment() {
         System.out.println(Thread.currentThread().getName());
