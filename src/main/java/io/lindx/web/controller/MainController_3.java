@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MainController_3 {
 
-    @GetMapping("/main1")
+    @GetMapping("/main13")
     public @ResponseBody String printMainInfo(){
         System.out.println("we are in main method 1");
-        return "Hello from RestController";
+        return "Hello from @ResponseBody";
     }
 }
