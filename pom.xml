@@ -33,10 +33,10 @@
             <version>5.3.3</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
+            <artifactId>spring-web</artifactId>
             <version>5.3.3</version>
         </dependency>
 
@@ -47,12 +47,11 @@
             <version>5.3.3</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/jstl/jstl -->
+        <!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf-spring5 -->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-            <scope>runtime</scope>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring5</artifactId>
+            <version>3.0.12.RELEASE</version>
         </dependency>
 
     </dependencies>
@@ -83,7 +82,7 @@
                     <executable>
                         JAVA_HOME/bin/javac
                     </executable>
-    
+
                 </configuration>
             </plugin>
 

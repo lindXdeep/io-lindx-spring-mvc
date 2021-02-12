@@ -1,6 +1,3 @@
-
-
-
 ```sh
 mkdir -p src/main/webapp/WEB-INF
 touch src/main/webapp/index.jsp
@@ -14,8 +11,13 @@ rm -r src/main/webapp/index.jsp
 ```
 
 ```sh 
-rm -r ~/deploy-contaner/webapps/myapp &&  sleep 5  && mvn compile war:war
+rm -r ~/deploy-contaner/webapps/myapp && sleep 5 && mvn compile war:war
 ```
+
 ```sh 
-mvn compile && rm -r ~/deploy-contaner/webapps/myapp &  sleep 5  && mvn war:war
+mvn compile && rm -r ~/deploy-contaner/webapps/myapp & sleep 5 && mvn war:war
+```
+
+```sh
+mvn compile && rm -r ~/deploy-contaner/webapps/myapp & sleep 5 && mvn war:exploded
 ```
