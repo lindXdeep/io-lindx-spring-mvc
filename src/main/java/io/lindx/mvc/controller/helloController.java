@@ -1,12 +1,12 @@
 package io.lindx.mvc.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-@RestController
+@Controller
 public class helloController {
     
     @GetMapping("/hello")
     public String helloworld(){
-        return "hey controller";
+        return "hello_view";
     }
 }
