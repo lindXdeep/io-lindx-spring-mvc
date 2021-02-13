@@ -1,6 +1,7 @@
 package io.lindx.mvc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 @Controller
@@ -8,9 +9,11 @@ public class FirstController {
     
     @GetMapping("/hello")
     public String helloPage(@RequestParam(value = "name", required =  false) String name,
-                            @RequestParam(value = "surname", required =  false) String surname) {
+                            @RequestParam(value = "surname", required =  false) String surname,
+                            Model model) {  // Spring атоматически внедрит модель
 
-        System.out.println("hello: " + name + " " + surname);
+        model.addAttribute("message",                          // ключ
+                            "hello, " + name + " " + surname); // значение                                            
 
         return "first/hello";
     }
