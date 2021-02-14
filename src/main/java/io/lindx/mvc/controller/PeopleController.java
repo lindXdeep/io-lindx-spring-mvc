@@ -1,8 +1,11 @@
 package io.lindx.mvc.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -45,7 +48,12 @@ public class PeopleController {
     }
     
     @PostMapping()
-    public String create(@ModelAttribute("person") Person person){
+    public String create( @ModelAttribute("person") @Valid Person person,
+                            BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors())
+            return "people/new";                        
+
         persons_dao.save(person);
         return "redirect:/people";
     }
@@ -58,9 +66,13 @@ public class PeopleController {
     }
 
     @PatchMapping("/{id}")
-    public String update( @ModelAttribute("person") Person person, 
+    public String update( @ModelAttribute("person") @Valid Person person, BindingResult bindingResult, 
                           @PathVariable("id")       int id){
-        persons_dao.update(id, person);
+
+        if (bindingResult.hasErrors())
+            return "people/edit";                       
+
+        persons_dao.update(id, person); // есливозникла ошибка в bindingResult тот этот обьект не будет возращаен
         return "redirect:/people";
     }
 
