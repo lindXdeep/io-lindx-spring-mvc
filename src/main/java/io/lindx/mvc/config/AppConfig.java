@@ -13,7 +13,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
-@ComponentScan(value = "io.lindx.mvc.controller")
+@ComponentScan(value = "io.lindx.mvc")
 @EnableWebMvc
 public class AppConfig implements WebMvcConfigurer {
     
