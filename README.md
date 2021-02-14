@@ -21,3 +21,6 @@ mvn compile && rm -r ~/deploy-contaner/webapps/myapp & sleep 5 && mvn war:war
 ```sh
 mvn compile && rm -r ~/deploy-contaner/webapps/myapp & sleep 5 && mvn war:exploded
 ```
+```sh
+mvn compile && rm -r ~/deploy-contaner/webapps/myapp & sleep 3 & mkdir -p ~/deploy-contaner/webapps/myapp &  sleep 5 && mvn war:exploded
+```
